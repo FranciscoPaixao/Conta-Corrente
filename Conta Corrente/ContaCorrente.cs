@@ -28,7 +28,7 @@ namespace Conta_Corrente
                 if (valor > this.saldo)
                 {
                     movimentacoes.Add(" Credito: " + valor*-1);
-                    this.limite += saldo;
+                    this.limite -= Math.Abs(saldo);
                 }
                 else
                 {
@@ -48,7 +48,7 @@ namespace Conta_Corrente
                 if (valor >= this.saldo)
                 {
                     movimentacoes.Add(" Credito: " + valor*-1);
-                    this.limite += saldo;
+                    this.limite -= Math.Abs(saldo);
                 }
                 else
                 {
