@@ -28,7 +28,7 @@ namespace Conta_Corrente
                 if (valor > this.saldo)
                 {
                     movimentacoes.Add(" Credito: " + valor*-1);
-                    this.limite -= valor - (this.limite - valor);
+                    this.limite -= (valor-limite)-valor;
                 }
                 else
                 {
@@ -48,7 +48,7 @@ namespace Conta_Corrente
                 if (valor >= this.saldo)
                 {
                     movimentacoes.Add(" Credito: " + valor*-1);
-                    this.limite -= valor - (this.limite - valor);
+                    this.limite -= (valor-limite)-valor;
                 }
                 else
                 {
@@ -76,6 +76,7 @@ namespace Conta_Corrente
         {
             Console.WriteLine("Numero da conta: " + this.numero);
             Console.WriteLine("Saldo: " + this.saldo);
+            Console.WriteLine("Limite: " + this.limite);
             Console.WriteLine("Movimentações: ");
             foreach (var movimentacao in movimentacoes)
             {

@@ -7,7 +7,7 @@
             ContaCorrente conta1 = new ContaCorrente();
             conta1.saldo = 1000;
             conta1.numero = 12;
-            conta1.limite = 400;
+            conta1.limite = 0;
             conta1.ehespecial = true;
             
             conta1.Sacar(200);
