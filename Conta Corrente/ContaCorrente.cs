@@ -25,7 +25,7 @@ namespace Conta_Corrente
                 this.saldo -= valor;
                 contaDestino.saldo += valor;
                 contaDestino.movimentacoes.Add(" Debito: " + valor);
-                if (valor >= this.saldo)
+                if (valor > this.saldo)
                 {
                     movimentacoes.Add(" Credito: " + valor*-1);
                     this.limite -= valor - (this.limite - valor);
