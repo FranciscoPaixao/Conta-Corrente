@@ -23,9 +23,8 @@
             conta2.limite = 0;
             conta2.ehespecial = true;
 
-            conta1.ExibirExtrato();
             conta1.TransferirPara(conta2, 400);
-            
+            conta1.ExibirExtrato();
             conta2.ExibirExtrato();
         }
     }
